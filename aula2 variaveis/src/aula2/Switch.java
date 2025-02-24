@@ -7,16 +7,16 @@ public class Switch {
 		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
 		System.out.println("informe o valor da compra");
+	
 		double valorCompra = sc.nextDouble();
 		
 		System.out.println("metodo pagamento");
 		System.out.println("1- Dinheiro/pix");
 		System.out.println("2- Débito");
-		System.out.println("3- Crédito");
+		System.out.println("3- Método parcelamento");
+		
 		int metodoPagamento = sc.nextInt();
 		int parc = sc.nextInt();
-		
-		double vf = sc.nextDouble();
 		
 		switch(metodoPagamento) {
 		
@@ -24,30 +24,6 @@ public class Switch {
 			
 			double valorFinal = valorCompra * 0.9;
 			System.out.println("O valor da compra fico: " + valorFinal);
-			
-			System.out.println("Métodos de parcelamento: ");
-			System.out.println("1- a vista");
-			System.out.println("2- 2x ");
-			System.out.println("3- 3x: ");
-
-
-		
-			switch(parc) {
-			case 1:
-				System.out.println(valorFinal);
-				break;
-				
-			case 2:
-				 vf = valorFinal+ valorFinal * 0.05;
-				System.out.println(valorFinal);
-				break;
-				
-				
-			case 3:
-				vf = valorFinal+ valorFinal * 0.10;
-				System.out.println(valorFinal);
-				break;
-			}
 	
 			break;
 		case 2:
@@ -55,14 +31,35 @@ public class Switch {
 			System.out.println("O valor da compra fico: " + valorFinal);
 			break;
 		case 3:
-			 valorFinal = valorCompra * 0.9;
-			System.out.println("O valor da compra fico: " + valorFinal);
+			
+			System.out.println("A vista");
+			System.out.println("1- 2x");
+			System.out.println("2- 3x");
+			
+			
+			
+			int metodoParcelamento = sc.nextInt();
+			
+			
+			switch (metodoParcelamento) {
+			case 1: 
+				System.out.println("O valor ficou: " + valorCompra);
+				break;
+				
+			case 2: 
+				valorFinal = valorCompra * 1.05;
+				System.out.println("O valor ficou: " + valorCompra);
+				break;
+				
+			case 3: 
+				valorFinal = valorCompra * 1.1;
+				System.out.println("O valor ficou: " + valorCompra);
+				break;
+				
+			}
+			
 			break;
 		
-		case 4:
-			 valorFinal = valorCompra * 0.9;
-			System.out.println("O valor da compra fico: " + valorFinal);
-			break;
 			
 			
 		}
